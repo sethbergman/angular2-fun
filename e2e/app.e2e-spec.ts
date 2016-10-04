@@ -7,8 +7,8 @@ describe('angular2-fun App', function() {
     page = new Angular2FunPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying Angular 2 Fun, () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Angular 2 Fun!');
   });
 });
