@@ -4,21 +4,17 @@ import { Component, Inject } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `<div>
-
-<app-simple-form></app-simple-form>
-
-{{mail.message}}
-<hr>
-{{api}}
-
+  <ul>
+    <li *ngFor="let message of mail.messages">
+      {{message}}
+    </li>
+  </ul>
   </div>`
 })
 
 export class AppComponent {
-  title = `Angular 2 Fun!`;
 
   constructor(
-    @Inject('mail') private mail,
-    @Inject('api') private api
+    @Inject('mail') private mail
   ){}
 }
